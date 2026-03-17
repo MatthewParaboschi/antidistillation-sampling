@@ -1,0 +1,12 @@
+torch>=2.0
+transformers>=4.47
+trl==0.12.0
+accelerate
+peft
+hydra-core
+omegaconf
+math-verify
+datasets
+wandb
+rich
+pandas

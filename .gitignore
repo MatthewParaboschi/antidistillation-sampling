@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+*.pt
+*.pth
+*.bin
+*.safetensors
+outputs/
+wandb/
+*.parquet
+/tmp/
+.hydra/

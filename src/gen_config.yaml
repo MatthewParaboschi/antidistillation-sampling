@@ -1,0 +1,43 @@
+# gen_config.yaml — Trace generation configuration
+hydra:
+  run:
+    dir: ${exp_dir}/metadata/{now:yyyy-MM-dd_HH-mm-ss}
+  output_subdir: null
+  job:
+    chdir: false
+
+seed: 42
+teacher: ${oc.env:TEACHER, "Qwen/Qwen2.5-3B-Instruct"}
+tokenizer: ${teacher}
+teacher_cfg: null
+is_teacher: false
+
+# Antidistillation
+lam: 0.0
+wandb_lam: null
+antidistillation: null  # Set automatically based on lam
+eps: 1e-2
+proxy_student: ${oc.env:PROXY_STUDENT, "Qwen/Qwen2.5-3B-Instruct"}
+grad_path: null
+
+# Dataset
+data_split: gsm8k_holdout
+max_samples: null
+
+# Generation parameters
+batch_size: 512
+max_length: 1024
+max_prompt_length: 512
+tau: 0.0
+answer_force: true
+repetition_penalty: 1.0
+
+# Output
+use_wandb: false
+exp_dir: ${oc.env:EXP_DIR, "debug"}
+metadata_dir: ${exp_dir}/metadata
+trace_registry: ${metadata_dir}/trace_registry.jsonl
+trace_dir: ${exp_dir}/traces
+trace_name: REPLACE_ME
+trace_path: ${trace_dir}/${trace_name}
+trace_colname: "trace"
