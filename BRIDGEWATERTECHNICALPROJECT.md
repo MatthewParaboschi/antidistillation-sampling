@@ -1,3 +1,0 @@
-While the project is ongoing and supervised under a professor, I chose to submit this because my deepest interests lie in understanding AI  and partaking in undergrdauate research is the easiest way to both be on the cutting edge while having access to high-end GPU architecture. This proejct is ran on the TTIC cluster. 
-
-So far, I have shown from distilling several models under various parameters that the rejection sampling detailed in README.md can provide a semi-effective attack to get around the methods in the motivating paper here: https://arxiv.org/abs/2504.13146. More work is to be done on whether there are more effective ways to conduct log-perplexity based attacks.
